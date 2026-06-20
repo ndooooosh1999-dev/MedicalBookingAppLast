@@ -1,0 +1,22 @@
+// build.gradle (Project level)
+// هذا الملف على مستوى المشروع كله
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.0'
+
+        // ✅ مطلوب لـ Firebase
+        classpath 'com.google.gms:google-services:4.4.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}

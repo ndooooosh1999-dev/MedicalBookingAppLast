@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AndroidManifest.xml - يحدد شاشات التطبيق والصلاحيات -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ✅ صلاحية الإنترنت - مطلوبة لـ Firebase -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="حجز المواعيد الطبية"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MedicalBookingApp">
+
+        <!-- شاشة البداية (Splash) - أول شاشة تظهر -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- شاشة تسجيل الدخول -->
+        <activity android:name=".LoginActivity" android:exported="false"/>
+
+        <!-- شاشة إنشاء حساب جديد -->
+        <activity android:name=".RegisterActivity" android:exported="false"/>
+
+        <!-- شاشة المريض الرئيسية - قائمة الأطباء -->
+        <activity android:name=".PatientMainActivity" android:exported="false"/>
+
+        <!-- شاشة الطبيب الرئيسية - لوحة التحكم -->
+        <activity android:name=".DoctorMainActivity" android:exported="false"/>
+
+        <!-- شاشة تفاصيل الطبيب وحجز الموعد -->
+        <activity android:name=".DoctorDetailActivity" android:exported="false"/>
+
+        <!-- شاشة مواعيدي للمريض -->
+        <activity android:name=".MyAppointmentsActivity" android:exported="false"/>
+
+    </application>
+
+</manifest>

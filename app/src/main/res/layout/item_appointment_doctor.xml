@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_appointment_doctor.xml - بطاقة الموعد في لوحة الطبيب -->
+<!-- مسار الملف: res/layout/item_appointment_doctor.xml -->
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- اسم المريض -->
+        <TextView
+            android:id="@+id/tvPatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="المريض: أحمد محمد"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- التاريخ والوقت -->
+        <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 2025-03-15  ⏰ 10:00"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- ملاحظات المريض -->
+        <TextView
+            android:id="@+id/tvNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📝 ألم في المعدة"
+            android:textSize="13sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"/>
+
+        <!-- فاصل -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- الحالة وأزرار القبول/الرفض -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- الحالة -->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⏳ قيد الانتظار"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <!-- زر القبول -->
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="قبول ✅"
+                android:textSize="12sp"
+                android:backgroundTint="#E8F5E9"
+                android:textColor="#2E7D32"
+                android:layout_marginEnd="6dp"/>
+
+            <!-- زر الرفض -->
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="رفض ❌"
+                android:textSize="12sp"
+                android:backgroundTint="#FFEBEE"
+                android:textColor="#C62828"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,51 @@
+// build.gradle (App level)
+// هذا الملف داخل مجلد app/
+
+plugins {
+    id 'com.android.application'
+
+    // ✅ مطلوب لـ Firebase
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.medicalbooking'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.medicalbooking"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // ✅ Firebase Authentication - لتسجيل الدخول
+    implementation 'com.google.firebase:firebase-auth:22.3.1'
+
+    // ✅ Firebase Firestore - قاعدة البيانات السحابية
+    implementation 'com.google.firebase:firebase-firestore:24.10.1'
+
+    // ✅ Firebase BOM - يضمن توافق الإصدارات
+    implementation platform('com.google.firebase:firebase-bom:32.7.0')
+
+    // ✅ CircleImageView - لعرض صور الأطباء دائرية الشكل
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+}

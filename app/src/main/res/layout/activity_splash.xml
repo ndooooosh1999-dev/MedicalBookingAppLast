@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_splash.xml - تصميم شاشة البداية -->
+<!-- مسار الملف: res/layout/activity_splash.xml -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#1565C0">
+    <!-- اللون الأزرق الداكن للخلفية -->
+
+    <!-- أيقونة الصحة/المستشفى -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🏥"
+        android:textSize="80sp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- اسم التطبيق -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="حجز المواعيد الطبية"
+        android:textSize="26sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- وصف قصير -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="احجز موعدك بكل سهولة"
+        android:textSize="14sp"
+        android:textColor="#B3E5FC"
+        android:layout_marginBottom="60dp"/>
+
+    <!-- دائرة التحميل -->
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#FFFFFF"/>
+
+</LinearLayout>
