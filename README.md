@@ -6,8 +6,7 @@
 **التخصص:** برمجة تطبيقات الهواتف الذكية
 
 ---
-
-## 🗂️ هيكل الملفات - أين يذهب كل ملف؟
+هيكل الملفات 
 
 ```
 MedicalBookingApp/
@@ -48,36 +47,6 @@ MedicalBookingApp/
             ├── item_appointment.xml          ✅
             └── item_appointment_doctor.xml   ✅
 ```
-
----
-
-## ⚙️ خطوات الإعداد
-
-### 1. إنشاء المشروع في Android Studio
-- New Project → Empty Activity
-- Name: `MedicalBookingApp`
-- Package: `com.example.medicalbooking`
-- Language: Java
-- Min SDK: API 21
-
-### 2. إعداد Firebase
-1. اذهب لـ console.firebase.google.com
-2. أنشئ مشروعاً جديداً باسم `MedicalBookingApp`
-3. أضف تطبيق Android بالـ Package name أعلاه
-4. حمّل `google-services.json` وضعه في مجلد `app/`
-5. فعّل: Authentication → Email/Password
-6. فعّل: Firestore Database
-7. انسخ قواعد الأمان من `firestore.rules`
-
-### 3. تحديث build.gradle
-- انسخ محتوى `build.gradle.project.txt` → `build.gradle` (Project)
-- انسخ محتوى `build.gradle.app.txt` → `build.gradle` (App)
-- اضغط Sync Now
-
-### 4. نسخ الملفات
-- انسخ كل ملف Java لمساره الصحيح
-- انسخ كل ملف XML لمساره الصحيح
-- اضغط Run ▶️
 
 ---
 
